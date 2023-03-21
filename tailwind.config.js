@@ -10,7 +10,12 @@ module.exports = {
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        colors: {
+        colors: ({ colors }) => ({
+            current: colors.current,
+            transparent: colors.transparent,
+            black: colors.black,
+            white: colors.white,
+            grey: colors.grey,
             primary: {
                 50: "#eefffe",
                 100: "#c6fffd",
@@ -23,7 +28,7 @@ module.exports = {
                 800: "#075f68",
                 900: "#0c4f55",
             },
-        },
+        }),
     },
     plugins: [],
 };
