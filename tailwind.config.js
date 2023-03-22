@@ -10,6 +10,11 @@ module.exports = {
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
+        extend: {
+            fontFamily: {
+                kaushan: ["Kaushan Script", "cursive"],
+            },
+        },
         colors: ({ colors }) => ({
             current: colors.current,
             transparent: colors.transparent,

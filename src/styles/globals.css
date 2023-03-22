@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-    font-family: "Kaushan Script", cursive;
+    @apply font-kaushan;
 }

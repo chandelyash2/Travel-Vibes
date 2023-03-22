@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Button, { ButtonType } from "../Button";
 import Container from "../Container";
-
+import Image from "next/image";
 const navList = [
     {
         name: "Home",
@@ -35,9 +35,12 @@ const Header: React.FC = () => {
             <Container>
                 <div className="w-full flex gap-4 items-center py-9 justify-between text-white">
                     <div>
-                        <img
+                        <Image
                             src="/Logo.png"
-                            className="max-w-[164px] h-auto "
+                            alt="logo"
+                            className="cursor-pointer"
+                            width={165}
+                            height={40}
                         />
                     </div>
                     <div className="hidden lg:flex">
@@ -48,9 +51,12 @@ const Header: React.FC = () => {
                         </ul>
                     </div>
                     <div className="lg:hidden">
-                        <img
+                        <Image
                             src="/Menu Bar.png"
-                            className="w-6  cursor-pointer"
+                            alt="Menu"
+                            className="cursor-pointer"
+                            width={24}
+                            height={0}
                         />
                     </div>
                     <div className="hidden lg:flex">
