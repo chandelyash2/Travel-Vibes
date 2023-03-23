@@ -13,7 +13,7 @@ const navList = [
         name: "Experience",
     },
     {
-        name: "Discover Sories",
+        name: "Discover Stories",
     },
 ];
 const Header: React.FC = () => {

@@ -15,8 +15,17 @@ const Trending = () => {
                         Climb mountains not so that the world can see you but so
                         that you can see the world.
                     </p>
-                    <div className="max-width-[555px] max-h-[656px]">
-                        <TrendingCards />
+
+                    <div className="grid grid-rows-2 grid-flow-col gap-4 ">
+                        <div className="row-span-3 max-h-[656px] overflow-hidden relative">
+                            <TrendingCards />
+                        </div>
+                        <div className="col-span-2 max-h-[318px] overflow-hidden relative">
+                            <TrendingCards />
+                        </div>
+                        <div className="row-span-2 col-span-2 max-h-[318px] overflow-hidden relative">
+                            <TrendingCards />
+                        </div>
                     </div>
                 </div>
             </Container>
