@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import React from "react";
-import Layout from "common/Layout/Layout";
-import Home from "components/Home";
+import Layout from "src/common/Layout/Layout";
+import Home from "src/components/Home";
 
 const index: NextPage = () => {
     return (

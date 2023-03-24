@@ -16,9 +16,7 @@
         "incremental": true,
         "outDir": "./dist",
         "paths": {
-            "src/*": ["./src/*"],
-            "common/*": ["./src/common/*"],
-            "components/*": ["./src/components/*"]
+            "src/*": ["./src/*"]
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

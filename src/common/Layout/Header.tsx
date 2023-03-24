@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Button, { ButtonType } from "../Button";
 import Container from "../Container";
 import Image from "next/image";
+import Link from "next/link";
 const navList = [
     {
         name: "Home",
@@ -28,12 +29,12 @@ const Header: React.FC = () => {
     }, []);
     return (
         <header
-            className={`w-full ${
+            className={`w-full backdrop-blur-[2px]  ${
                 scrollPosition ? "sticky top-0 bg-primary-700 " : "absolute"
             } `}
         >
             <Container>
-                <div className="w-full flex gap-4 items-center py-9 justify-between text-white">
+                <div className="w-full flex gap-4 items-center py-9 justify-between text-white ">
                     <div>
                         <Image
                             src="/Logo.png"
@@ -44,9 +45,11 @@ const Header: React.FC = () => {
                         />
                     </div>
                     <div className="hidden lg:flex">
-                        <ul className="flex gap-10 text-lg">
+                        <ul className="flex gap-10 text-lg cursor-pointer">
                             {navList.map((nav, i) => (
-                                <li key={i}>{nav.name}</li>
+                                <li key={i} className="">
+                                    <Link href="/">{nav.name}</Link>
+                                </li>
                             ))}
                         </ul>
                     </div>
