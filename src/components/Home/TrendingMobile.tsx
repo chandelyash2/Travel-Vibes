@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Container from "src/common/Container";
 import Heading from "src/common/Heading";
@@ -16,23 +17,50 @@ const TrendingMobile = () => {
                     </p>
 
                     <div className="flex flex-col gap-4">
-                        <div>
+                        <div className="flex flex-col gap-2">
                             <div className="h-[300px] ">
                                 <ImageWrapper />
                             </div>
                             <Title label="India’s most beautiful  place all must visit" />
+                            <p className="">
+                                <span>
+                                    This place is situated in Himachal Pradesh's
+                                    Kangra{" "}
+                                </span>
+                                <span className="text-primary-700 cursor-pointer">
+                                    Read More...
+                                </span>
+                            </p>
                         </div>
-                        <div>
+                        <div className="flex flex-col gap-2">
                             <div className="h-[300px] ">
                                 <ImageWrapper />
                             </div>
                             <Title label="India’s most beautiful  place all must visit" />
+                            <p className="">
+                                <span>
+                                    This place is situated in Himachal Pradesh's
+                                    Kangra{" "}
+                                </span>
+                                <span className="text-primary-700 cursor-pointer">
+                                    Read More...
+                                </span>
+                            </p>
                         </div>
-                        <div>
+                        <div className="flex flex-col gap-2">
                             <div className="h-[300px] ">
                                 <ImageWrapper />
                             </div>
                             <Title label="India’s most beautiful  place all must visit" />
+                            <p className="">
+                                <span>
+                                    This place is situated in Himachal Pradesh's
+                                    Kangra{" "}
+                                </span>
+                                <span className="text-primary-700 cursor-pointer">
+                                    Read More...
+                                </span>
+                            </p>
                         </div>
                     </div>
                 </div>
