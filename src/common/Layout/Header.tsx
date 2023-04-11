@@ -19,6 +19,7 @@ const navList = [
 ];
 const Header: React.FC = () => {
     const [scrollPosition, setScrollPosition] = useState<boolean>(false);
+    const [menuActive, setMenuActive] = useState(false);
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -27,9 +28,13 @@ const Header: React.FC = () => {
             );
         }
     }, []);
+    const menuDrawer = () => {
+        setMenuActive(prev => !prev);
+    };
+
     return (
         <header
-            className={`w-full backdrop-blur-[2px]  ${
+            className={`w-full backdrop-blur-[2px] z-40 ${
                 scrollPosition ? "sticky top-0 bg-primary-700 " : "absolute"
             } `}
         >
@@ -53,7 +58,7 @@ const Header: React.FC = () => {
                             ))}
                         </ul>
                     </div>
-                    <div className="lg:hidden">
+                    <div className="lg:hidden" onClick={menuDrawer}>
                         <Image
                             src="/Menu Bar.png"
                             alt="Menu"
@@ -74,6 +79,46 @@ const Header: React.FC = () => {
                         />
                     </div>
                 </div>
+                {menuActive && (
+                    <div className="absolute p-9 inset-0 w-screen h-screen bg-primary-700  text-white">
+                        <div className="flex justify-between items-center">
+                            <Image
+                                src="/Logo.png"
+                                alt="logo"
+                                className="cursor-pointer"
+                                width={165}
+                                height={40}
+                            />
+                            <Image
+                                src="/closeMenu.png"
+                                alt="logo"
+                                className="cursor-pointer"
+                                width={24}
+                                height={24}
+                                onClick={menuDrawer}
+                            />
+                        </div>
+
+
+                        <ul className="flex flex-col gap-4 pt-20 text-lg cursor-pointer">
+                            {navList.map((nav, i) => (
+                                <li key={i} className="">
+                                    <Link href="/">{nav.name}</Link>
+                                </li>
+                            ))}
+                              <Button
+                            label="Contact Us"
+                            type="button"
+                            variant={
+                                scrollPosition
+                                    ? ButtonType.Variant2
+                                    : ButtonType.Varaint1
+                            }
+                        />
+                        </ul>
+                      
+                    </div>
+                )}
             </Container>
         </header>
     );

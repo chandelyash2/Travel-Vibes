@@ -14,6 +14,9 @@ module.exports = {
             fontFamily: {
                 kaushan: ["Kaushan Script", "cursive"],
             },
+            backgroundImage:{
+                'mask':"url('/Mask group.png')"
+            }
         },
         colors: ({ colors }) => ({
             current: colors.current,
