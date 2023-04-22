@@ -6,15 +6,19 @@ import Link from "next/link";
 const navList = [
     {
         name: "Home",
+        url: "/",
     },
     {
         name: "Blog",
+        url: "/blog",
     },
     {
         name: "Experience",
+        url: "/experience",
     },
     {
         name: "Discover Stories",
+        url: "discoverStories",
     },
 ];
 const Header: React.FC = () => {
@@ -34,13 +38,13 @@ const Header: React.FC = () => {
 
     return (
         <header
-            className={`w-full backdrop-blur-[2px] z-40 ${
+            className={`w-full h-[80px] backdrop-blur-[2px] z-40 ${
                 scrollPosition ? "sticky top-0 bg-primary-700 " : "absolute"
             } `}
         >
             <Container>
-                <div className="w-full flex gap-4 items-center py-9 justify-between text-white ">
-                    <div>
+                <div className="w-full flex gap-4  items-center py-5 justify-between text-white ">
+                    <Link href={"/"}>
                         <Image
                             src="/Logo.png"
                             alt="logo"
@@ -48,12 +52,12 @@ const Header: React.FC = () => {
                             width={165}
                             height={40}
                         />
-                    </div>
+                    </Link>
                     <div className="hidden lg:flex">
                         <ul className="flex gap-10 text-lg cursor-pointer">
                             {navList.map((nav, i) => (
                                 <li key={i} className="">
-                                    <Link href="/">{nav.name}</Link>
+                                    <Link href={nav.url}>{nav.name}</Link>
                                 </li>
                             ))}
                         </ul>
@@ -82,13 +86,17 @@ const Header: React.FC = () => {
                 {menuActive && (
                     <div className="absolute p-9 inset-0 w-screen h-screen bg-primary-700  text-white">
                         <div className="flex justify-between items-center">
-                            <Image
-                                src="/Logo.png"
-                                alt="logo"
-                                className="cursor-pointer"
-                                width={165}
-                                height={40}
-                            />
+                            <Link href="/">
+                                {" "}
+                                <Image
+                                    src="/Logo.png"
+                                    alt="logo"
+                                    className="cursor-pointer"
+                                    width={165}
+                                    height={40}
+                                />
+                            </Link>
+
                             <Image
                                 src="/closeMenu.png"
                                 alt="logo"
@@ -99,24 +107,18 @@ const Header: React.FC = () => {
                             />
                         </div>
 
-
                         <ul className="flex flex-col gap-4 pt-20 text-lg cursor-pointer">
                             {navList.map((nav, i) => (
                                 <li key={i} className="">
-                                    <Link href="/">{nav.name}</Link>
+                                    <Link href={nav.url}>{nav.name}</Link>
                                 </li>
                             ))}
-                              <Button
-                            label="Contact Us"
-                            type="button"
-                            variant={
-                                scrollPosition
-                                    ? ButtonType.Variant2
-                                    : ButtonType.Varaint1
-                            }
-                        />
+                            <Button
+                                label="Contact Us"
+                                type="button"
+                                variant={ButtonType.Variant2}
+                            />
                         </ul>
-                      
                     </div>
                 )}
             </Container>

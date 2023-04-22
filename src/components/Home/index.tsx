@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Trending from "./Trending";
 import Bannner from "./Bannner";
@@ -9,6 +10,7 @@ const Home = () => {
             <img
                 src="/Home.jpeg"
                 className="w-full h-[500px] lg:h-auto object-cover"
+                alt="home"
             />
             <Trending />
             <Bannner />

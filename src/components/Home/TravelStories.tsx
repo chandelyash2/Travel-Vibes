@@ -6,18 +6,16 @@ import StoriesCardMobile from "./StoriesCardMobile";
 
 const TravelStories = () => {
     return (
-      
-            <Container>
-                <div className="flex flex-col py-8 gap-2 lg:gap-4">
-                    <Heading label1="Travel" label2="Stories" />
-                    <p className="text-lg">
-                        The journey of a thousnad mile begin with a single step
-                    </p>
-                    <StoriesCard/>
-                    <StoriesCardMobile/>
-                </div>
-            </Container>
-
+        <Container>
+            <div className="flex flex-col py-8 gap-2 lg:gap-4">
+                <Heading label1="Travel" label2="Stories" />
+                <p className="text-lg">
+                    The journey of a thousnad mile begin with a single step
+                </p>
+                <StoriesCard />
+                <StoriesCardMobile />
+            </div>
+        </Container>
     );
 };
 

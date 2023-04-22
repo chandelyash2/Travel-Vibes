@@ -1,9 +1,14 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 const Bannner = () => {
     return (
         <div className="relative text-center text-white ">
             <div className="hidden lg:flex w-auto ">
-                <img src="/banner.png" alt="banner" className="w-screen object-cover" />
+                <img
+                    src="/banner.png"
+                    alt="banner"
+                    className="w-screen object-cover"
+                />
             </div>
             <div className=" relative lg:hidden ">
                 <img

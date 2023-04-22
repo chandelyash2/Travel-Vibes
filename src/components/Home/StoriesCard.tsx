@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Title from "src/common/Title";
 
@@ -18,16 +19,24 @@ const StoriesCard = () => {
     ];
     return (
         <div className="hidden lg:flex lg:justify-evenly  gap-4 ">
-            <div className="flex flex-col max-h-[550px] gap-2">
-                <img src="Rasol.JPG" className="max-h-[540px]" />
+            <div className="flex flex-col w-[50%] max-h-[550px] gap-2">
+                <img
+                    src="Rasol.JPG"
+                    className="max-h-[540px] w-full"
+                    alt="stories"
+                />
                 <Title label={trendingList[0].title} />
                 <p>
                     <span>{trendingList[0].content}</span>
                     <span className="text-primary-700"> Read More...</span>
                 </p>
             </div>
-            <div className="flex flex-col max-h-[620px] gap-2">
-                <img src="Rasol.JPG" className="max-h-[230px]" />
+            <div className="flex flex-col w-[50%] max-h-[620px] gap-2">
+                <img
+                    src="Rasol.JPG"
+                    className="max-h-[230px] w-full object-cover"
+                    alt="stories"
+                />
 
                 <div className=" px-2 gap-2 flex flex-col">
                     <Title label={trendingList[1].title} />
@@ -37,7 +46,11 @@ const StoriesCard = () => {
                     </p>
                 </div>
 
-                <img src='Rasol.JPG' className="max-h-[230px] w-full" />
+                <img
+                    src="Rasol.JPG"
+                    className="max-h-[230px] w-full object-cover"
+                    alt="stories"
+                />
 
                 <div className="  px-2 gap-2 flex flex-col">
                     <Title label={trendingList[2].title} />

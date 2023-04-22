@@ -7,7 +7,7 @@ import Heading from "src/common/Heading";
 const Popular = () => {
     return (
         <Container>
-            <div className="flex flex-col text-center  lg:text-center gap-4 py-10">
+            <div className="flex flex-col text-center  lg:text-center gap-4 py-8">
                 <Heading label1="Popular" label2="blogs" />
                 <p className="text-lg">
                     Remember that happiness is a way of travel, not a
@@ -18,7 +18,11 @@ const Popular = () => {
                     <BlogCard />
                     <BlogCard />
                 </div>
-                <Button variant={ButtonType.Varaint1} label="View More" type='button'/>
+                <Button
+                    variant={ButtonType.Varaint1}
+                    label="View More"
+                    type="button"
+                />
             </div>
         </Container>
     );

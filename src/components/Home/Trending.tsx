@@ -7,19 +7,17 @@ import StoriesCardMobile from "./StoriesCardMobile";
 
 const Trending = () => {
     return (
-      
-            <Container>
-                <div className="flex flex-col py-8 gap-4 ">
-                    <Heading label1="Trending" label2="blogs" />
-                    <p>
-                        Climb mountains not so that the world can see you but so
-                        that you can see the world.
-                    </p>
-                    <StoriesCard />
-                    <StoriesCardMobile/>
-                </div>
-            </Container>
-      
+        <Container>
+            <div className="flex flex-col py-8 gap-4 ">
+                <Heading label1="Trending" label2="blogs" />
+                <p>
+                    Climb mountains not so that the world can see you but so
+                    that you can see the world.
+                </p>
+                <StoriesCard />
+                <StoriesCardMobile />
+            </div>
+        </Container>
     );
 };
 
