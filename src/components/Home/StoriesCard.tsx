@@ -28,7 +28,7 @@ const StoriesCard = () => {
                 <Title label={trendingList[0].title} />
                 <p>
                     <span>{trendingList[0].content}</span>
-                    <span className="text-primary-700"> Read More...</span>
+                    <span className="text-primary"> Read More...</span>
                 </p>
             </div>
             <div className="flex flex-col w-[50%] max-h-[620px] gap-2">
@@ -42,7 +42,7 @@ const StoriesCard = () => {
                     <Title label={trendingList[1].title} />
                     <p>
                         <span>{trendingList[1].content}</span>
-                        <span className="text-primary-700"> Read More...</span>
+                        <span className="text-primary"> Read More...</span>
                     </p>
                 </div>
 
@@ -56,7 +56,7 @@ const StoriesCard = () => {
                     <Title label={trendingList[2].title} />
                     <p>
                         <span>{trendingList[2].content}</span>
-                        <span className="text-primary-700"> Read More...</span>
+                        <span className="text-primary"> Read More...</span>
                     </p>
                 </div>
             </div>

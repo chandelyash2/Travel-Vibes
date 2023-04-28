@@ -14,7 +14,7 @@ const StoriesCardMobile = () => {
                     <span>
                         This place is situated in Himachal Pradesh's Kangra{" "}
                     </span>
-                    <span className="text-primary-700 cursor-pointer">
+                    <span className="text-primary cursor-pointer">
                         Read More...
                     </span>
                 </p>
@@ -27,7 +27,7 @@ const StoriesCardMobile = () => {
                     <span>
                         This place is situated in Himachal Pradesh's Kangra{" "}
                     </span>
-                    <span className="text-primary-700 cursor-pointer">
+                    <span className="text-primary cursor-pointer">
                         Read More...
                     </span>
                 </p>
@@ -40,7 +40,7 @@ const StoriesCardMobile = () => {
                     <span>
                         This place is situated in Himachal Pradesh's Kangra{" "}
                     </span>
-                    <span className="text-primary-700 cursor-pointer">
+                    <span className="text-primary cursor-pointer">
                         Read More...
                     </span>
                 </p>

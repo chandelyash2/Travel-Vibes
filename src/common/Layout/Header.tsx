@@ -3,6 +3,7 @@ import Button, { ButtonType } from "../Button";
 import Container from "../Container";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 const navList = [
     {
         name: "Home",
@@ -24,6 +25,7 @@ const navList = [
 const Header: React.FC = () => {
     const [scrollPosition, setScrollPosition] = useState<boolean>(false);
     const [menuActive, setMenuActive] = useState(false);
+    const router = useRouter();
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -39,7 +41,7 @@ const Header: React.FC = () => {
     return (
         <header
             className={`w-full h-[80px] backdrop-blur-[2px] z-40 ${
-                scrollPosition ? "sticky top-0 bg-primary-700 " : "absolute"
+                scrollPosition ? "sticky top-0 bg-primary " : "absolute"
             } `}
         >
             <Container>
@@ -56,7 +58,14 @@ const Header: React.FC = () => {
                     <div className="hidden lg:flex">
                         <ul className="flex gap-10 text-lg cursor-pointer">
                             {navList.map((nav, i) => (
-                                <li key={i} className="">
+                                <li
+                                    key={i}
+                                    className={`${
+                                        router.pathname === nav.url
+                                            ? "border-b-2 border-black "
+                                            : "hover:text-black"
+                                    }`}
+                                >
                                     <Link href={nav.url}>{nav.name}</Link>
                                 </li>
                             ))}
@@ -84,7 +93,7 @@ const Header: React.FC = () => {
                     </div>
                 </div>
                 {menuActive && (
-                    <div className="absolute p-9 inset-0 w-screen h-screen bg-primary-700  text-white">
+                    <div className="absolute p-9 inset-0 w-screen h-screen bg-primary  text-white">
                         <div className="flex justify-between items-center">
                             <Link href="/">
                                 {" "}

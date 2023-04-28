@@ -17,7 +17,7 @@ const socialLinks = [
 ];
 const Footer = () => {
     return (
-        <footer className="max-h-[496px] bg-primary-700 w-full text-white">
+        <footer className="max-h-[496px] bg-primary w-full text-white">
             <div className="flex flex-col items-center py-20 gap-6">
                 <div>
                     <Image

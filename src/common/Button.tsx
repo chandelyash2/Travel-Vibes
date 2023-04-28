@@ -6,7 +6,7 @@ interface iButton {
 }
 export enum ButtonType {
     Varaint1 = "bg-primary-700 p-2 w-[133px] h-[44px] rounded-3xl text-xl text-white ",
-    Variant2 = "bg-white p-2 w-[133px] h-[44px] rounded-3xl text-xl text-primary-700 ",
+    Variant2 = "bg-white p-2 w-[133px] h-[44px] rounded-3xl text-xl text-primary ",
 }
 const Button: React.FC<iButton> = ({ variant, type, label }) => {
     return (

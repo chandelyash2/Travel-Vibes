@@ -7,8 +7,7 @@ interface iHeading {
 const Heading: React.FC<iHeading> = ({ label1, label2 }) => {
     return (
         <h1 className="text-3xl lg:text-5xl">
-            <span className="text-primary-700">{label1}</span>{" "}
-            <span>{label2}</span>
+            <span className="text-primary">{label1}</span> <span>{label2}</span>
         </h1>
     );
 };
