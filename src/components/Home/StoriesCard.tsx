@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { useRouter } from "next/router";
 import React from "react";
 import Title from "src/common/Title";
 
@@ -17,9 +18,13 @@ const StoriesCard = () => {
             content: "This place is situated in Himachal Pradesh's Kangra ",
         },
     ];
+    const router = useRouter();
     return (
         <div className="hidden lg:flex lg:justify-evenly  gap-4 ">
-            <div className="flex flex-col w-[50%] max-h-[550px] gap-2">
+            <div
+                className="flex flex-col w-[50%] max-h-[550px] gap-2 cursor-pointer"
+                onClick={() => router.push("/blog/abc")}
+            >
                 <img
                     src="Rasol.JPG"
                     className="max-h-[540px] w-full"
@@ -31,7 +36,7 @@ const StoriesCard = () => {
                     <span className="text-primary"> Read More...</span>
                 </p>
             </div>
-            <div className="flex flex-col w-[50%] max-h-[620px] gap-2">
+            <div className="flex flex-col w-[50%] max-h-[620px] gap-2 ">
                 <img
                     src="Rasol.JPG"
                     className="max-h-[230px] w-full object-cover"

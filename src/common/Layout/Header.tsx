@@ -40,7 +40,7 @@ const Header: React.FC = () => {
 
     return (
         <header
-            className={`w-full h-[80px] backdrop-blur-[2px] z-40 ${
+            className={`w-full h-[80px] backdrop-blur-[1px] z-40 ${
                 scrollPosition ? "sticky top-0 bg-primary " : "absolute"
             } `}
         >

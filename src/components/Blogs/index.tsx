@@ -4,7 +4,7 @@ import BlogList from "./BlogList";
 
 const Blog = () => {
     return (
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 ">
             <img
                 src="/Lahaul.jpeg"
                 className="w-full h-[500px] lg:h-auto object-cover"
@@ -14,6 +14,7 @@ const Blog = () => {
                 <h2 className="text-2xl  lg:text-7xl ">Lahaul</h2>
             </div>
             <BlogList />
+            {/* <FooterInstagramFeed/> */}
         </div>
     );
 };
