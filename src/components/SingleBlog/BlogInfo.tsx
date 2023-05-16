@@ -13,7 +13,7 @@ const BlogInfo = () => {
                 <div className="flex flex-col gap-4">
                     <img
                         src="/Rectangle.png"
-                        className="w-full max-h-[500px] object-cover"
+                        className="w-full max-h-[500px] object-contain"
                         alt="img"
                     />
                     <h2 className="text-primary text-2xl ">
